@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBITUARY</title>
+    <style>
+        html{
+                background-image: linear-gradient(270deg,black,green);
+                height: 100%;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li a{
+            text-decoration: none;
+            color: lime;
+            padding-left: 10px;
+        }
+        li{
+            display:inline;
+        }
+    </style>
+      <meta name="description" content="This is an obituary site">
+      <meta name="keywords" content="Death,DateOfBirth,DateOfDeath, Obituary">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="instagram.com">Instagram</a></li>
+            <li><a href="facebook.com">Facebook</a></li>
+            <li><a href="X.com">X</a></li>
+        </ul>
+    </nav>
+    <fieldset>
+        <legend>OBITUARY</legend>
+            <form action="/submit_obituary" method="post" name="f84" onsubmit="return valform()">
+                <label for="">Name of the late:</label>
+                <input type="text" name="name">
+                <br>
+                <label for="">The date of birth:</label>
+                <input type="date" name="dob">
+                <br>
+                <label for="">Date of death:</label>
+                <input type="date" name="dod">
+                <br>
+                <label for="">About the late:</label>
+                <input type="text" name="content">
+                <br>
+                <label for="">Author's name:</label>
+                <input type="text" name="author">
+                <br>
+                <center><input type="submit" value="SUBMIT DETAILS" style="background-color: yellow;"></center>
+            </form>
+    </fieldset>
+    <script>
+        function valform(){
+            var name=document.f84.name.value;
+            let content=document.f84.content.value;
+            if(name==null || name==""){
+                alert("THIS FIELD MUST BE FILLED");
+                return false;
+            }
+            if(content==null || content==""){
+                alert("THIS FIELD MUST BE FILLED");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
